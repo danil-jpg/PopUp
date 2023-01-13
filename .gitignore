@@ -5,8 +5,8 @@
 
 # Node artifact files
 node_modules/
-dist/
-PixelPerfectBackground/
+# dist/
+# PixelPerfectBackground/
 # Compiled Java class files
 *.class
 
