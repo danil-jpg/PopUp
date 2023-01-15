@@ -1,0 +1,40 @@
+.trigger-block {
+    width: 64px;
+    height: 176px;
+    background-color: #5438a8;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+.trigger-block__circle {
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+.trigger-block__circle_item {
+}
+
+@media screen and (max-width: 375px) {
+    .trigger-block {
+        width: 56px;
+        height: 152px;
+    }
+
+    .trigger-block__circle {
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -4,9 +4,174 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>teset</title>
+        <title>PopUp</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/main.min.css" />
     </head>
     <body>
-        <a>Link!!!</a>
+        <main class="main">
+            <!-- Вертикальная плашка,в которой триггеры. -->
+            <!-- <div class="trigger-block">
+                <div class="trigger-block__circle">
+                    <picture class="trigger-block__circle_item">
+                        <img
+                            src="img/TriggerBlock/chatTrigger.svg"
+                            alt="chatTrigger"
+                        />
+                    </picture>
+                </div>
+                <div class="trigger-block__circle">
+                    <picture class="trigger-block__circle_item">
+                        <img
+                            src="img/TriggerBlock/phoneTrigger.svg"
+                            alt="phoneTrigger"
+                        />
+                    </picture>
+                </div>
+                <div class="trigger-block__circle">
+                    <picture class="trigger-block__circle_item">
+                        <img
+                            src="img/TriggerBlock/questionTrigger.svg"
+                            alt="questionTrigger"
+                        />
+                    </picture>
+                </div>
+            </div> -->
+            <div class="pop-up-block">
+                <div class="pop-up__top">
+                    <div>
+                        <picture class="pop-up__top_picture">
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/QuestionMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/QuestionIconPc.svg"
+                                alt="questionSvg"
+                            />
+                        </picture>
+                    </div>
+                    <div class="pop-up__top_text-wr">
+                        <p class="pop-up__top_title-text">FAQ</p>
+                        <p class="pop-up__top_text">
+                            Если вам все ещё нужна помощь, напишите нам в чат
+                        </p>
+                    </div>
+                </div>
+                <div class="pop-up__search">
+                    <input
+                        type="text"
+                        placeholder="Поиск по ключевым словам..."
+                        class="pop-up__search_input"
+                    />
+                </div>
+                <div class="pop-up__question">
+                    <div class="pop-up__question_wr">
+                        <p class="pop-up__question_text">Основные вопросы</p>
+                        <picture>
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/EnterButtonMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/EnterButton.svg"
+                                alt="Svg"
+                                class="pop-up__question_img"
+                            />
+                        </picture>
+                    </div>
+                    <div class="pop-up__question_wr">
+                        <p class="pop-up__question_text">Вопросы по оплате</p>
+                        <picture>
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/EnterButtonMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/EnterButton.svg"
+                                alt="Svg"
+                                class="pop-up__question_img"
+                            />
+                        </picture>
+                    </div>
+                    <div class="pop-up__question_wr">
+                        <p class="pop-up__question_text">Вопросы по доставке</p>
+                        <picture>
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/EnterButtonMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/EnterButton.svg"
+                                alt="Svg"
+                                class="pop-up__question_img"
+                            />
+                        </picture>
+                    </div>
+                    <div class="pop-up__question_wr">
+                        <p class="pop-up__question_text">
+                            Вопросы по обратной связи
+                        </p>
+                        <picture>
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/EnterButtonMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/EnterButton.svg"
+                                alt="Svg"
+                                class="pop-up__question_img"
+                            />
+                        </picture>
+                    </div>
+                    <div class="pop-up__question_wr">
+                        <p class="pop-up__question_text">
+                            Вопросы по работе сайта
+                        </p>
+                        <picture>
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/EnterButtonMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/EnterButton.svg"
+                                alt="Svg"
+                                class="pop-up__question_img"
+                            />
+                        </picture>
+                    </div>
+                    <div class="pop-up__question_wr">
+                        <p class="pop-up__question_text">
+                            Вопросы по скидкам и бонусам
+                        </p>
+                        <picture>
+                            <source
+                                media="(max-width: 576px)"
+                                srcset="img/PopUp/EnterButtonMob.svg"
+                            />
+                            <img
+                                src="img/PopUp/EnterButton.svg"
+                                alt="Svg"
+                                class="pop-up__question_img"
+                            />
+                        </picture>
+                    </div>
+                </div>
+                <div class="pop-up__cross">
+                    <picture class="pop-up__cross_cross-icon">
+                        <source
+                            media="(max-width : 576px)"
+                            srcset="img/PopUp/CrossMobile.svg"
+                        />
+                        <img src="img/PopUp/Cross.svg" alt="Cross" />
+                    </picture>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
