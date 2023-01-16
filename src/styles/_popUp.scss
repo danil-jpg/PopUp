@@ -1,6 +1,6 @@
 .pop-up-block {
     background-color: white;
-    padding: 24px;
+    // padding: 24px;
     gap: 24px;
     width: 533px;
     height: 500px;
@@ -9,14 +9,42 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     // overflow-y: scroll;
+
     // Это на завтра
 }
+
+.pop-up__scroll_padding {
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 24px;
+}
+
+.pop-up__scroll {
+    height: 330px;
+    overflow-y: scroll;
+}
+
+.pop-up__scroll::-webkit-scrollbar {
+    width: 4px; /* ширина всей полосы прокрутки */
+}
+
+.pop-up__scroll::-webkit-scrollbar-track {
+    background: transparent; /* цвет зоны отслеживания */
+}
+
+.pop-up__scroll::-webkit-scrollbar-thumb {
+    background: #f0f2f7;
+    border-radius: 4px;
+}
+
 .pop-up__top {
     width: 100%;
     display: grid;
     grid-template-columns: 10% 90%;
     align-items: center;
     align-items: start;
+    padding: 24px 24px 0 24px;
+    box-sizing: border-box;
 }
 .pop-up__top_picture {
 }
@@ -52,6 +80,7 @@
 
 .pop-up__search {
     margin-top: -3px;
+    padding-left: 24px;
 }
 .pop-up__search_input {
     box-sizing: border-box;
@@ -145,16 +174,17 @@
     .pop-up-block {
         width: 343px;
         border-radius: 18px;
-        padding-top: 17px;
-        padding-left: 16px;
+        padding: 0;
         /* padding-right: 29px; */
     }
     .pop-up__top {
+        padding: 19px 15px 0;
     }
     .pop-up__top_picture {
     }
     .pop-up__top_text-wr {
         transform: translate(26px, -8px);
+        width: 90%;
     }
     .pop-up__top_title-text {
         font-size: 20px;
@@ -166,6 +196,7 @@
 
     .pop-up__search {
         margin-top: -11px;
+        padding-left: 15px;
     }
     .pop-up__search_input {
         width: 311px;
@@ -186,6 +217,9 @@
         font-size: 16px;
     }
     .pop-up__question_img {
+    }
+    .pop-up__scroll_padding {
+        padding-left: 16px;
     }
 
     .pop-up__cross {
