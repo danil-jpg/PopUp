@@ -270,6 +270,7 @@
     position: absolute;
     top: 0px;
     opacity: 0;
+    left: 0;
 }
 
 .pop-up__answer__text_text.active {
@@ -328,11 +329,36 @@
     }
     .pop-up__scroll_padding {
         padding-left: 16px;
+
+        padding-right: 12px;
     }
 
     .pop-up__cross {
         top: -7px;
         left: 90.8%;
+    }
+    .pop-up__answer_top {
+        grid-template-columns: 10.7% 1fr;
+    }
+    .pop-up__answer_main.active {
+        width: 100%;
+        margin-top: 18px;
+        box-sizing: border-box;
+    }
+    .pop-up__answer_question-top {
+        margin-top: -1px;
+    }
+    .pop-up__answer_top-text {
+        font-size: 16px;
+    }
+    .pop-up__answer_plus {
+        transform: translate(-8px, -4px);
+    }
+    .pop-up__answer__text {
+        margin-top: -15px;
+    }
+    .pop-up__answer_question-top.active {
+        margin-top: -1px;
     }
 }
 
