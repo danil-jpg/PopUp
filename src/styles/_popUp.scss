@@ -170,6 +170,114 @@
     }
 }
 
+.pop-up__answer {
+}
+.pop-up__answer_top {
+    display: grid;
+    justify-items: start;
+    margin-top: 25px;
+    grid-template-columns: 6.7% 1fr;
+}
+.pop-up__answer_img {
+    display: block;
+    cursor: pointer;
+}
+.pop-up__answer_img.active {
+    display: none;
+}
+.pop-up__answer_title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #26314f;
+    line-height: 0;
+    margin-top: 13px;
+}
+.pop-up__answer_main {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    background: #f0f2f7;
+    border-radius: 8px;
+    margin-top: 21px;
+    transition: 0.7s;
+    border: 1px solid #f0f2f7;
+}
+.pop-up__answer_main.active {
+    border: 1px solid #f0f2f7;
+    border-radius: 8px;
+    width: 485px;
+    margin-bottom: 1px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    transition: 0.7s;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.pop-up__answer_question-top {
+    display: grid;
+    justify-items: start;
+    padding-top: 12px;
+    grid-template-columns: 95.2% 1fr;
+    width: 100%;
+    padding: 0 12px;
+    align-items: center;
+}
+.pop-up__answer_question-top.active {
+    padding-top: 0;
+    width: 100%;
+    transition: 0.3s;
+    padding: 0 12px;
+    width: 100%;
+    padding: 0;
+    margin-top: 12px;
+}
+.pop-up__answer_top-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+
+    /* Default color/100 */
+
+    color: #26314f;
+    margin-top: 9px;
+}
+.pop-up__answer_plus {
+}
+.pop-up__answer_minus {
+}
+.pop-up__answer__text {
+    margin-top: 0;
+}
+.pop-up__answer__text_text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #464d62;
+
+    a {
+        color: #5438a8;
+    }
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+}
+
+.pop-up__answer__text_text.active {
+    position: relative;
+    opacity: 1;
+    top: 0;
+}
+
 @media screen and (max-width: 576px) {
     .pop-up-block {
         width: 343px;
@@ -225,5 +333,14 @@
     .pop-up__cross {
         top: -7px;
         left: 90.8%;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .pop-up-block {
+        width: 95%;
+    }
+    .pop-up__search_input {
+        width: 100%;
     }
 }
