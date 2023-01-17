@@ -1,6 +1,5 @@
 .pop-up-block {
     background-color: white;
-    // padding: 24px;
     gap: 24px;
     width: 533px;
     height: 500px;
@@ -8,9 +7,13 @@
     box-sizing: border-box;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
-    // overflow-y: scroll;
+    display: none;
+    animation: 1s show ease;
+}
 
-    // Это на завтра
+.pop-up-block.active {
+    display: block;
+    position: absolute;
 }
 
 .pop-up__scroll_padding {
@@ -201,7 +204,7 @@
     background: #f0f2f7;
     border-radius: 8px;
     margin-top: 21px;
-    transition: 0.7s;
+    // transition: 0.7s;
     border: 1px solid #f0f2f7;
 }
 .pop-up__answer_main.active {
@@ -211,7 +214,7 @@
     margin-bottom: 1px;
     padding: 0 12px;
     box-sizing: border-box;
-    transition: 0.7s;
+    // transition: 0.7s;
     min-height: 70px;
     display: flex;
     flex-direction: column;
@@ -277,6 +280,62 @@
     position: relative;
     opacity: 1;
     top: 0;
+}
+
+.pop-up__empty {
+    margin-top: 24px;
+}
+.pop-up__empty_text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    /* Default color/90 */
+
+    color: #464d62;
+    width: 100%;
+    text-align: center;
+}
+
+// .box {
+//     animation: 5s show ease;
+// }
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.open-animation {
+    animation: 0.7s show ease;
+}
+
+.close-animation {
+    animation: 0.7s hide ease;
+}
+
+.open-animation-fast {
+    animation: 0.3s show ease;
+}
+.close-animation-fast {
+    animation: 0.3s hide ease;
 }
 
 @media screen and (max-width: 576px) {
@@ -369,4 +428,7 @@
     .pop-up__search_input {
         width: 100%;
     }
+}
+.none {
+    display: none;
 }

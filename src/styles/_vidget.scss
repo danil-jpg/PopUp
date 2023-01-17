@@ -8,6 +8,9 @@
     // justify-content: center;
     align-items: center;
 }
+.trigger-block.active {
+    pointer-events: none;
+}
 .trigger-block__circle {
     width: 48px;
     height: 48px;

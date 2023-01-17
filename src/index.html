@@ -16,8 +16,8 @@
     <body>
         <main class="main">
             <!-- Вертикальная плашка,в которой триггеры. -->
-            <!-- <div class="trigger-block">
-                <div class="trigger-block__circle">
+            <div class="trigger-block">
+                <div class="trigger-block__circle" id="chatCircle">
                     <picture class="trigger-block__circle_item">
                         <img
                             src="img/TriggerBlock/chatTrigger.svg"
@@ -41,7 +41,7 @@
                         />
                     </picture>
                 </div>
-            </div> -->
+            </div>
             <div class="pop-up-block">
                 <div class="pop-up__top">
                     <div>
@@ -72,8 +72,11 @@
                 </div>
                 <div class="pop-up__scroll">
                     <div class="pop-up__scroll_padding">
-                        <!-- <div class="pop-up__question">
-                            <div class="pop-up__question_wr">
+                        <div class="pop-up__question">
+                            <div
+                                class="pop-up__question_wr"
+                                id="pop-up__main-question"
+                            >
                                 <p class="pop-up__question_text">
                                     Основные вопросы
                                 </p>
@@ -89,7 +92,7 @@
                                     />
                                 </picture>
                             </div>
-                            <div class="pop-up__question_wr">
+                            <div class="pop-up__question_wr" id="#">
                                 <p class="pop-up__question_text">
                                     Вопросы по оплате
                                 </p>
@@ -105,7 +108,7 @@
                                     />
                                 </picture>
                             </div>
-                            <div class="pop-up__question_wr">
+                            <div class="pop-up__question_wr" id="#">
                                 <p class="pop-up__question_text">
                                     Вопросы по доставке
                                 </p>
@@ -121,7 +124,7 @@
                                     />
                                 </picture>
                             </div>
-                            <div class="pop-up__question_wr">
+                            <div class="pop-up__question_wr" id="#">
                                 <p class="pop-up__question_text">
                                     Вопросы по обратной связи
                                 </p>
@@ -137,7 +140,7 @@
                                     />
                                 </picture>
                             </div>
-                            <div class="pop-up__question_wr">
+                            <div class="pop-up__question_wr" id="#">
                                 <p class="pop-up__question_text">
                                     Вопросы по работе сайта
                                 </p>
@@ -153,7 +156,7 @@
                                     />
                                 </picture>
                             </div>
-                            <div class="pop-up__question_wr">
+                            <div class="pop-up__question_wr" id="#">
                                 <p class="pop-up__question_text">
                                     Вопросы по скидкам и бонусам
                                 </p>
@@ -169,156 +172,169 @@
                                     />
                                 </picture>
                             </div>
-                        </div> -->
-                        <div class="pop-up__answer">
-                            <div class="pop-up__answer_top">
-                                <div class="pop-up__answer_img">
-                                    <img
-                                        src="img/PopUp/returnIcon.svg"
-                                        alt="returnIcon"
-                                    />
+                        </div>
+                        <div class="pop-up__answer-wr none">
+                            <div class="pop-up__answer">
+                                <div class="pop-up__answer_top">
+                                    <div class="pop-up__answer_img">
+                                        <img
+                                            src="img/PopUp/returnIcon.svg"
+                                            alt="returnIcon"
+                                        />
+                                    </div>
+                                    <p class="pop-up__answer_title">
+                                        Основные вопросы
+                                    </p>
                                 </div>
-                                <p class="pop-up__answer_title">
-                                    Основные вопросы
-                                </p>
+                                <div class="pop-up__answer_main none">
+                                    <div class="pop-up__answer_question-top">
+                                        <p class="pop-up__answer_top-text">
+                                            Вопросы по оплате
+                                        </p>
+                                        <img
+                                            src="img/PopUp/plusIcon.svg"
+                                            alt="plus"
+                                            class="pop-up__answer_img pop-up__answer_plus"
+                                        />
+                                        <img
+                                            src="img/PopUp/minusIcon.svg"
+                                            alt="minus"
+                                            class="pop-up__answer_img pop-up__answer_minus active"
+                                        />
+                                    </div>
+                                    <div class="pop-up__answer__text">
+                                        <p class="pop-up__answer__text_text">
+                                            Если подтверждения нет, ваш заказ
+                                            все еще зарегистрирован у нас, и вам
+                                            не нужно об этом беспокоиться.
+                                            Пожалуйста, проверьте почту со
+                                            спамом и папку со спамом, иногда
+                                            письма попадают и туда. Если вы все
+                                            еще не можете его найти, вы можете
+                                            связаться с нами по адресу
+                                            <a
+                                                href="mailto : pakimine@prokosmeetika"
+                                                >pakimine@prokosmeetika.ee.</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="pop-up__answer_main">
-                                <div class="pop-up__answer_question-top">
-                                    <p class="pop-up__answer_top-text">
-                                        Вопросы по оплате
-                                    </p>
-                                    <img
-                                        src="img/PopUp/plusIcon.svg"
-                                        alt="plus"
-                                        class="pop-up__answer_img pop-up__answer_plus"
-                                    />
-                                    <img
-                                        src="img/PopUp/minusIcon.svg"
-                                        alt="minus"
-                                        class="pop-up__answer_img pop-up__answer_minus active"
-                                    />
+                            <div class="pop-up__answer">
+                                <div class="pop-up__answer_main">
+                                    <div class="pop-up__answer_question-top">
+                                        <p class="pop-up__answer_top-text">
+                                            Как посмотреть статус моего заказа и
+                                            узнать, отправлен ли товар
+                                        </p>
+                                        <img
+                                            src="img/PopUp/plusIcon.svg"
+                                            alt="plus"
+                                            class="pop-up__answer_img pop-up__answer_plus"
+                                        />
+                                        <img
+                                            src="img/PopUp/minusIcon.svg"
+                                            alt="minus"
+                                            class="pop-up__answer_img pop-up__answer_minus active"
+                                        />
+                                    </div>
+                                    <div class="pop-up__answer__text">
+                                        <p class="pop-up__answer__text_text">
+                                            Если подтверждения нет, ваш заказ
+                                            все еще зарегистрирован у нас, и вам
+                                            не нужно об этом беспокоиться.
+                                            Пожалуйста, проверьте почту со
+                                            спамом и папку со спамом, иногда
+                                            письма попадают и туда. Если вы все
+                                            еще не можете его найти, вы можете
+                                            связаться с нами по адресу
+                                            <a
+                                                href="mailto : pakimine@prokosmeetika"
+                                                >pakimine@prokosmeetika.ee.</a
+                                            >
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="pop-up__answer__text">
-                                    <p class="pop-up__answer__text_text">
-                                        Если подтверждения нет, ваш заказ все
-                                        еще зарегистрирован у нас, и вам не
-                                        нужно об этом беспокоиться. Пожалуйста,
-                                        проверьте почту со спамом и папку со
-                                        спамом, иногда письма попадают и туда.
-                                        Если вы все еще не можете его найти, вы
-                                        можете связаться с нами по адресу
-                                        <a
-                                            href="mailto : pakimine@prokosmeetika"
-                                            >pakimine@prokosmeetika.ee.</a
-                                        >
-                                    </p>
+                            </div>
+                            <div class="pop-up__answer">
+                                <div class="pop-up__answer_main">
+                                    <div class="pop-up__answer_question-top">
+                                        <p class="pop-up__answer_top-text">
+                                            Как посмотреть статус моего заказа и
+                                            узнать, отправлен ли товар
+                                        </p>
+                                        <img
+                                            src="img/PopUp/plusIcon.svg"
+                                            alt="plus"
+                                            class="pop-up__answer_img pop-up__answer_plus"
+                                        />
+                                        <img
+                                            src="img/PopUp/minusIcon.svg"
+                                            alt="minus"
+                                            class="pop-up__answer_img pop-up__answer_minus active"
+                                        />
+                                    </div>
+                                    <div class="pop-up__answer__text">
+                                        <p class="pop-up__answer__text_text">
+                                            Если подтверждения нет, ваш заказ
+                                            все еще зарегистрирован у нас, и вам
+                                            не нужно об этом беспокоиться.
+                                            Пожалуйста, проверьте почту со
+                                            спамом и папку со спамом, иногда
+                                            письма попадают и туда. Если вы все
+                                            еще не можете его найти, вы можете
+                                            связаться с нами по адресу
+                                            <a
+                                                href="mailto : pakimine@prokosmeetika"
+                                                >pakimine@prokosmeetika.ee.</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pop-up__answer">
+                                <div class="pop-up__answer_main">
+                                    <div class="pop-up__answer_question-top">
+                                        <p class="pop-up__answer_top-text">
+                                            Как посмотреть статус моего заказа и
+                                            узнать, отправлен ли товар
+                                        </p>
+                                        <img
+                                            src="img/PopUp/plusIcon.svg"
+                                            alt="plus"
+                                            class="pop-up__answer_img pop-up__answer_plus"
+                                        />
+                                        <img
+                                            src="img/PopUp/minusIcon.svg"
+                                            alt="minus"
+                                            class="pop-up__answer_img pop-up__answer_minus active"
+                                        />
+                                    </div>
+                                    <div class="pop-up__answer__text">
+                                        <p class="pop-up__answer__text_text">
+                                            Если подтверждения нет, ваш заказ
+                                            все еще зарегистрирован у нас, и вам
+                                            не нужно об этом беспокоиться.
+                                            Пожалуйста, проверьте почту со
+                                            спамом и папку со спамом, иногда
+                                            письма попадают и туда. Если вы все
+                                            еще не можете его найти, вы можете
+                                            связаться с нами по адресу
+                                            <a
+                                                href="mailto : pakimine@prokosmeetika"
+                                                >pakimine@prokosmeetika.ee.</a
+                                            >
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="pop-up__answer">
-                            <div class="pop-up__answer_main">
-                                <div class="pop-up__answer_question-top">
-                                    <p class="pop-up__answer_top-text">
-                                        Как посмотреть статус моего заказа и
-                                        узнать, отправлен ли товар
-                                    </p>
-                                    <img
-                                        src="img/PopUp/plusIcon.svg"
-                                        alt="plus"
-                                        class="pop-up__answer_img pop-up__answer_plus"
-                                    />
-                                    <img
-                                        src="img/PopUp/minusIcon.svg"
-                                        alt="minus"
-                                        class="pop-up__answer_img pop-up__answer_minus active"
-                                    />
-                                </div>
-                                <div class="pop-up__answer__text">
-                                    <p class="pop-up__answer__text_text">
-                                        Если подтверждения нет, ваш заказ все
-                                        еще зарегистрирован у нас, и вам не
-                                        нужно об этом беспокоиться. Пожалуйста,
-                                        проверьте почту со спамом и папку со
-                                        спамом, иногда письма попадают и туда.
-                                        Если вы все еще не можете его найти, вы
-                                        можете связаться с нами по адресу
-                                        <a
-                                            href="mailto : pakimine@prokosmeetika"
-                                            >pakimine@prokosmeetika.ee.</a
-                                        >
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pop-up__answer">
-                            <div class="pop-up__answer_main">
-                                <div class="pop-up__answer_question-top">
-                                    <p class="pop-up__answer_top-text">
-                                        Как посмотреть статус моего заказа и
-                                        узнать, отправлен ли товар
-                                    </p>
-                                    <img
-                                        src="img/PopUp/plusIcon.svg"
-                                        alt="plus"
-                                        class="pop-up__answer_img pop-up__answer_plus"
-                                    />
-                                    <img
-                                        src="img/PopUp/minusIcon.svg"
-                                        alt="minus"
-                                        class="pop-up__answer_img pop-up__answer_minus active"
-                                    />
-                                </div>
-                                <div class="pop-up__answer__text">
-                                    <p class="pop-up__answer__text_text">
-                                        Если подтверждения нет, ваш заказ все
-                                        еще зарегистрирован у нас, и вам не
-                                        нужно об этом беспокоиться. Пожалуйста,
-                                        проверьте почту со спамом и папку со
-                                        спамом, иногда письма попадают и туда.
-                                        Если вы все еще не можете его найти, вы
-                                        можете связаться с нами по адресу
-                                        <a
-                                            href="mailto : pakimine@prokosmeetika"
-                                            >pakimine@prokosmeetika.ee.</a
-                                        >
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pop-up__answer">
-                            <div class="pop-up__answer_main">
-                                <div class="pop-up__answer_question-top">
-                                    <p class="pop-up__answer_top-text">
-                                        Как посмотреть статус моего заказа и
-                                        узнать, отправлен ли товар
-                                    </p>
-                                    <img
-                                        src="img/PopUp/plusIcon.svg"
-                                        alt="plus"
-                                        class="pop-up__answer_img pop-up__answer_plus"
-                                    />
-                                    <img
-                                        src="img/PopUp/minusIcon.svg"
-                                        alt="minus"
-                                        class="pop-up__answer_img pop-up__answer_minus active"
-                                    />
-                                </div>
-                                <div class="pop-up__answer__text">
-                                    <p class="pop-up__answer__text_text">
-                                        Если подтверждения нет, ваш заказ все
-                                        еще зарегистрирован у нас, и вам не
-                                        нужно об этом беспокоиться. Пожалуйста,
-                                        проверьте почту со спамом и папку со
-                                        спамом, иногда письма попадают и туда.
-                                        Если вы все еще не можете его найти, вы
-                                        можете связаться с нами по адресу
-                                        <a
-                                            href="mailto : pakimine@prokosmeetika"
-                                            >pakimine@prokosmeetika.ee.</a
-                                        >
-                                    </p>
-                                </div>
-                            </div>
+
+                        <div class="pop-up__empty none">
+                            <p class="pop-up__empty_text">
+                                Ответ не найден. Введите другое слово или
+                                напишите нам в чате.
+                            </p>
                         </div>
                     </div>
                 </div>
