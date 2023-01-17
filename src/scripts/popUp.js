@@ -1,11 +1,14 @@
 const accrodionButtons = document.querySelectorAll('.pop-up__answer_plus')
-const questionBlock = document.querySelectorAll('.pop-up__answer_question-top')
 
 const menuTrigger = document.querySelector('#chatCircle')
 const menu = document.querySelector('.pop-up-block')
 const crossCloseIcon = document.querySelector('.pop-up__cross')
 
-// const answerMenu = document.querySelectorAll(".pop-up__answer")
+const questionsWrapper = document.querySelector('.pop-up__question')
+const answerWrapper = document.querySelector('.pop-up__answer-wr')
+
+const searchInput = document.querySelector('.pop-up__search_input')
+const failedSearchPopUp = document.querySelector('.pop-up__empty')
 
 function addAnswerMenu (parentTriggerId, menu) {
   const answerMenuTrigger = document.querySelectorAll(`${parentTriggerId} > *`)
@@ -38,7 +41,6 @@ function addAnswerMenu (parentTriggerId, menu) {
 }
 // функция для добавления новых меню,первый параметр - родитель елементов,на которые будет вешаться обработчик клика,
 // Второй параметр - меню,которое должно быть показано,
-// Пс
 addAnswerMenu('#pop-up__main-question', '.pop-up__answer-wr')
 
 menuTrigger.addEventListener('click', () => {
@@ -71,4 +73,19 @@ accrodionButtons.forEach(item => {
     textToToggle.classList.toggle('active')
     console.log(textToToggle)
   })
+})
+
+console.log(searchInput)
+
+searchInput.addEventListener('change', () => {
+  if (searchInput.value === 'false') {
+    failedSearchPopUp.classList.remove('none')
+
+    questionsWrapper.classList.add('none')
+    answerWrapper.classList.add('none')
+  } else if (searchInput.value === 'true') {
+    failedSearchPopUp.classList.add('none')
+
+    questionsWrapper.classList.remove('none')
+  }
 })
