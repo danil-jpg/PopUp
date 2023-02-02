@@ -7,6 +7,10 @@
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+
+    position: fixed;
+    right: 1.5%;
+    bottom: 1%;
 }
 .trigger-block.active {
     pointer-events: none;

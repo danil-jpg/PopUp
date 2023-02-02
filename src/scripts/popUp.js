@@ -71,11 +71,8 @@ accrodionButtons.forEach(item => {
 
     const textToToggle = concreteMain.querySelector('.pop-up__answer__text_text')
     textToToggle.classList.toggle('active')
-    console.log(textToToggle)
   })
 })
-
-console.log(searchInput)
 
 searchInput.addEventListener('change', () => {
   if (searchInput.value === 'false') {

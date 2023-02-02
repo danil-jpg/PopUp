@@ -9,6 +9,10 @@
     position: relative;
     display: none;
     animation: 1s show ease;
+
+    position: fixed;
+    right: 1.5%;
+    bottom: 1%;
 }
 
 .pop-up-block.active {
@@ -25,6 +29,10 @@
 .pop-up__scroll {
     height: 330px;
     overflow-y: scroll;
+}
+.pop-up__scroll::-moz {
+    scrollbar-width: 4px;
+    scrollbar-color: red;
 }
 
 .pop-up__scroll::-webkit-scrollbar {
@@ -328,7 +336,7 @@
 }
 
 .close-animation {
-    animation: 0.7s hide ease;
+    animation: 0.8s hide ease;
 }
 
 .open-animation-fast {
@@ -418,6 +426,12 @@
     }
     .pop-up__answer_question-top.active {
         margin-top: -1px;
+    }
+    .pop-up-block,
+    .trigger-block {
+        position: fixed;
+        right: 3%;
+        bottom: 1%;
     }
 }
 

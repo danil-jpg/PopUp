@@ -19,6 +19,7 @@ import sourcemaps from 'gulp-sourcemaps'
 import gulpCssMin from 'gulp-cssmin'
 import ttf2woff from 'gulp-ttf2woff'
 import { stream as critical } from 'critical'
+// import autoPrefixer from 'gulp-autoprefixer'
 const browserSync = name.create()
 const sass = gulpSass(dartSass)
 
@@ -177,17 +178,18 @@ function stylesMin () {
       .src(paths.stylesMin.src)
       .pipe(sourcemaps.init())
       .pipe(sass())
-      .pipe(
-        autoPrefixer({
-          cascade: false
-        })
-      )
+
       .pipe(cleanCss({ level: 2 }))
       .pipe(gulpCssMin())
       .pipe(
         rename({
           basename: 'main',
           suffix: '.min'
+        })
+      )
+      .pipe(
+        autoPrefixer({
+          cascade: false
         })
       )
       .pipe(sourcemaps.write())
