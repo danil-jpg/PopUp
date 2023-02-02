@@ -427,11 +427,14 @@
     .pop-up__answer_question-top.active {
         margin-top: -1px;
     }
-    .pop-up-block,
     .trigger-block {
         position: fixed;
-        right: 3%;
+        right: 4.3%;
         bottom: 1%;
+    }
+    .pop-up-block {
+        right: 50%;
+        transform: translate(50%);
     }
 }
 
